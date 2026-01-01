@@ -1,206 +1,351 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batidos Saludables | Energía Natural en Cada Sorbo</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Javier Gómez Eguizábal - Robotics Engineer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111;
+            --text-secondary: #555;
+            --text-meta: #666;
+            --accent-color: #0056b3;
+            --divider: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 60px 20px;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        header {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 60px;
+            align-items: flex-start;
+        }
+
+        .profile-photo img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px; 
+            display: block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-info {
+            flex: 1;
+            padding-top: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.5px;
+            color: #000;
+            line-height: 1.1;
+        }
+
+        .role {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            display: block;
+            font-weight: 300;
+        }
+
+        .contact-details {
+            font-size: 0.95rem;
+            color: var(--text-meta);
+            line-height: 1.9;
+        }
+
+        .intro-section {
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 300;
+            max-width: 90%;
+        }
+
+        section {
+            margin-bottom: 70px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--divider);
+            padding-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .entry {
+            margin-bottom: 35px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+
+        .entry-title {
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: #111;
+        }
+
+        .entry-meta {
+            font-size: 0.95rem;
+            color: var(--text-meta);
+        }
+
+        .entry-desc {
+            margin-top: 5px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .pub-entry {
+            margin-bottom: 30px;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #000;
+            display: block;
+            margin-bottom: 4px;
+            border-bottom: none;
+        }
+        
+        .pub-title:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .pub-venue {
+            font-style: italic;
+            color: var(--text-meta);
+            font-size: 0.95rem;
+        }
+
+        .award-tag {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #856404;
+            background-color: #fff3cd;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .skill-group h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            margin: 0 0 12px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .skill-group ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        footer {
+            margin-top: 100px;
+            border-top: 1px solid var(--divider);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+            .profile-photo img {
+                width: 180px;
+                height: 180px;
+                margin: 0 auto;
+            }
+            .header-info {
+                padding-top: 0;
+            }
+            .entry-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+            .entry-meta {
+                margin-bottom: 5px;
+                font-style: italic;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="main-header">
-        <nav class="nav-container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Batidos Saludables Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <div class="nav-buttons">
-                <button class="btn-primary">Pedir Ahora</button>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h1>Energía Natural en Cada Sorbo</h1>
-                <p>Descubre nuestros batidos 100% naturales, preparados con ingredientes frescos y llenos de nutrientes.</p>
-                <div class="hero-buttons">
-                    <button class="btn-primary">Ver Productos</button>
-                    <button class="btn-secondary">Conocer Más</button>
+    <div class="container">
+        
+        <header>
+            <div class="profile-photo">
+                <img src="profile.jpg" alt="Javier Gómez Eguizábal">
+            </div>
+            <div class="header-info">
+                <h1>Javier Gómez Eguizábal</h1>
+                <span class="role">Electronics & Robotics Engineer</span>
+                
+                <div class="contact-details">
+                    Madrid, Spain<br>
+                    <a href="mailto:javiergomezeguizabal@gmail.com">javiergomezeguizabal@gmail.com</a><br>
+                    <a href="https://www.linkedin.com/in/javier-g%C3%B3mez-eguiz%C3%A1bal-5769b3261/" target="_blank">LinkedIn Profile</a> | 
+                    <a href="https://github.com/Javierge15" target="_blank">GitHub</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/hero-batido.png" alt="Batido Saludable">
-            </div>
-        </section>
+        </header>
 
-        <section id="productos" class="products-section">
-            <h2>Nuestros Productos Destacados</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/batido-verde.jpg" alt="Batido Verde Energético">
-                        <div class="product-tag">Más Vendido</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Batido Verde Energético</h3>
-                        <p class="product-description">Espinaca, manzana, plátano y jengibre. Perfecto para empezar el día con energía.</p>
-                        <div class="product-price">
-                            <span class="price">€4.99</span>
-                            <button class="btn-add-to-cart">Añadir al Carrito</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/batido-rojos.jpg" alt="Batido de Frutos Rojos">
-                        <div class="product-tag">Nuevo</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Batido de Frutos Rojos</h3>
-                        <p class="product-description">Fresas, arándanos, yogur y miel. Delicioso y rico en antioxidantes.</p>
-                        <div class="product-price">
-                            <span class="price">€4.99</span>
-                            <button class="btn-add-to-cart">Añadir al Carrito</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/batido-tropical.jpg" alt="Batido Tropical">
-                    </div>
-                    <div class="product-info">
-                        <h3>Batido Tropical</h3>
-                        <p class="product-description">Piña, mango, coco y naranja. Un viaje a los trópicos en cada sorbo.</p>
-                        <div class="product-price">
-                            <span class="price">€4.99</span>
-                            <button class="btn-add-to-cart">Añadir al Carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="beneficios" class="benefits-section">
-            <h2>Beneficios de Nuestros Batidos</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <i class="fas fa-heartbeat"></i>
-                    <h3>Salud Cardiovascular</h3>
-                    <p>Mejora la circulación y reduce el riesgo de enfermedades cardíacas.</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-battery-full"></i>
-                    <h3>Energía Natural</h3>
-                    <p>Obtén energía sostenible sin cafeína ni azúcares añadidos.</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-weight"></i>
-                    <h3>Control de Peso</h3>
-                    <p>Ayuda a mantener un peso saludable de forma natural.</p>
-                </div>
-                <div class="benefit-card">
-                    <i class="fas fa-shield-virus"></i>
-                    <h3>Sistema Inmunológico</h3>
-                    <p>Refuerza tus defensas con vitaminas y minerales esenciales.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonios" class="testimonials-section">
-            <h2>Lo Que Dicen Nuestros Clientes</h2>
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Los batidos son increíbles. Me siento con más energía y he notado mejoras en mi digestión."</p>
-                    <div class="testimonial-author">
-                        <img src="images/testimonial-1.jpg" alt="Cliente 1">
-                        <div>
-                            <h4>María Gregorio</h4>
-                            <p>Cliente desde 1999</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="contact-section">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Contáctanos</h2>
-                    <p>¿Tienes alguna pregunta? Estamos aquí para ayudarte.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <p>+34 123 456 789</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <p>info@batidossaludables.com</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>C/123, Ramales de la Victoria</p>
-                        </div>
-                    </div>
-                </div>
-                <form id="contacto-form" class="contact-form">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="tel" placeholder="Teléfono">
-                    <textarea placeholder="Mensaje" required></textarea>
-                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Batidos Saludables</h3>
-                <p>Energía natural en cada sorbo.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#beneficios">Beneficios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Horario</h3>
-                <p>Lunes - Viernes: 8:00 - 20:00</p>
-                <p>Sábado: 9:00 - 15:00</p>
-                <p>Domingo: Cerrado</p>
-            </div>
+        <div class="intro-section">
+            <p>
+                I am a robotics and automation engineer passionate about building intelligent systems that connect the digital and physical worlds. 
+                My focus lies on developing autonomous vehicle technologies, industrial automation systems, and real-time teleoperation platforms. 
+                I work at the intersection of electronics, control, and software to create practical and reliable solutions.
+            </p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Batidos Saludables. Todos los derechos reservados.</p>
-        </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <section>
+            <h2>Current Position</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Researcher & Developer</span>
+                    <span class="entry-meta">Autonomous Mobility and Perception Lab - AMPL</span>
+                </div>
+                <div class="entry-desc">
+                    Developing advanced communication systems for autonomous and teleoperated vehicles.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Master's Degree in Robotics and Automation</span>
+                    <span class="entry-meta">Universidad Carlos III de Madrid - UC3M</span>
+                </div>
+                <div class="entry-desc">Thesis: Real-Time Teleoperation System for Intelligent Vehicles using WebRTC and ROS</div>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Bachelor's Degree in Industrial Electronics and Automation Engineering</span>
+                    <span class="entry-meta">Universidad de Cantabria - UC</span>
+                </div>
+                <div class="entry-desc">Thesis: Control System for Teaching Automation Principles</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Selected Publications</h2>
+
+            <div class="pub-entry">
+                <a href="#" class="pub-title">Overcoming Autonomy Limitations: A Robust Teleoperation Solution for Intelligent Vehicles</a>
+                <div class="pub-venue">IEEE International Conference on Vehicular Electronics and Safety (ICVES), Coventry, UK, 2025</div>
+                <div class="award-tag">🏆 Best Student Publication Runner-up</div>
+            </div>
+
+            <div class="pub-entry">
+                <span class="pub-title">Comparative Evaluation of Real-Time Communication Protocols in a Real Vehicle Teleoperation Platform</span>
+                <div class="pub-venue">EUROCAST International Conference on Computer Aided Systems Theory, Gran Canaria, Spain, 2026</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3>Operating Systems</h3>
+                    <ul><li>Linux, Unix-based environments</li></ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Programming</h3>
+                    <ul><li>Python, JavaScript, C, Matlab</li></ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Frameworks</h3>
+                    <ul><li>ROS, WebRTC, Dash, Qt Designer, RobotStudio, Docker, Git</li></ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Automation</h3>
+                    <ul><li>AutoCAD, SolidWorks, Eplan, TIA Portal</li></ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Languages</h3>
+                    <ul><li>English (Advanced), French (Basic), Spanish (Native)</li></ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Javier Gómez Eguizábal.</p>
+        </footer>
+
+    </div>
+
 </body>
-</html> 
+</html>
